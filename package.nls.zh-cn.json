@@ -3,7 +3,6 @@
     "configuration.title": "Cloudflare 翻译",
     "configuration.cloudflareTranslate.accountId.description": "用于 Workers AI API 请求的 Cloudflare Account ID。",
     "configuration.cloudflareTranslate.apiToken.description": "具有 Workers AI 权限的 Cloudflare API Token。",
-    "configuration.cloudflareTranslate.apiToken.markdownDescription": "具有 Workers AI 权限的 Cloudflare API Token。建议在可用时将其存储到 VS Code 支持 Secret Storage 的同步设置中。",
     "configuration.cloudflareTranslate.model.description": "Workers AI 模型名称，例如 @cf/meta/llama-3.1-8b-instruct。",
     "configuration.cloudflareTranslate.systemPrompt.description": "可选的系统提示词，用于控制翻译风格和行为。",
     "configuration.cloudflareTranslate.systemPrompt.default": "你是一个翻译助手。只返回翻译后的文本。",

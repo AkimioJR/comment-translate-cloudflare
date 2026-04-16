@@ -34,8 +34,7 @@
         "cloudflareTranslate.apiToken": {
           "type": "string",
           "default": "",
-          "description": "%configuration.cloudflareTranslate.apiToken.description%",
-          "markdownDescription": "%configuration.cloudflareTranslate.apiToken.markdownDescription%"
+          "description": "%configuration.cloudflareTranslate.apiToken.description%"
         },
         "cloudflareTranslate.model": {
           "type": "string",

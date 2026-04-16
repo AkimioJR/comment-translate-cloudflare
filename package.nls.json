@@ -3,7 +3,6 @@
     "configuration.title": "Cloudflare Translate",
     "configuration.cloudflareTranslate.accountId.description": "Cloudflare Account ID used for Workers AI API requests.",
     "configuration.cloudflareTranslate.apiToken.description": "Cloudflare API Token with Workers AI permissions.",
-    "configuration.cloudflareTranslate.apiToken.markdownDescription": "Cloudflare API Token with Workers AI permissions. It is recommended to store this in VS Code Secret Storage-aware sync settings if available.",
     "configuration.cloudflareTranslate.model.description": "Workers AI model name, for example @cf/meta/llama-3.1-8b-instruct.",
     "configuration.cloudflareTranslate.systemPrompt.description": "Optional system prompt for controlling translation style and behavior.",
     "configuration.cloudflareTranslate.systemPrompt.default": "You are a translation assistant. Return only translated text.",
