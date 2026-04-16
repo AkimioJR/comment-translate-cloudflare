@@ -55,19 +55,21 @@
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src",
-    "test": "vscode-test"
+    "test": "vscode-test",
+    "package": "vsce package"
   },
   "dependencies": {
     "comment-translate-manager": "^0.0.5"
   },
   "devDependencies": {
-    "@types/vscode": "^1.85.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "^25.6.0",
-    "typescript-eslint": "^8.56.1",
+    "@types/vscode": "^1.85.0",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2",
+    "@vscode/vsce": "^3.9.0",
     "eslint": "^10.2.0",
     "typescript": "^6.0.2",
-    "@vscode/test-cli": "^0.0.12",
-    "@vscode/test-electron": "^2.5.2"
+    "typescript-eslint": "^8.56.1"
   }
 }
