@@ -1,71 +1,51 @@
-# comment-translate-cloudflare README
+# Comment Translate Cloudflare
 
-This is the README for your extension "comment-translate-cloudflare". After writing up a brief description, we recommend including the following sections.
+A dedicated translation source extension for the [Comment Translate](https://marketplace.visualstudio.com/items?itemName=intellsmi.comment-translate) VS Code extension, powered by Cloudflare Workers AI.
 
-## Features
+This extension does not activate on its own — it only runs when selected as your active translation source in Comment Translate. It enables fast, reliable, and cost-effective translation for code comments, documents, and text directly in your editor, leveraging Cloudflare's global AI infrastructure.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## ✨ Key Features
 
-For example if there is an image subfolder under your extension project workspace:
+- Native seamless integration with the mainstream Comment Translate extension
+- Low-latency translation service powered by Cloudflare's global edge network
+- Support for dozens of languages, ideal for cross-regional code collaboration
+- Full compatibility with Windows, macOS and Linux operating systems
+- Works with Cloudflare's generous free tier for personal and small-team usage
+- Secure API-only communication, no user data stored or forwarded to third parties
 
-\!\[feature X\]\(images/feature-x.png\)
+## 📋 Prerequisites
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+1. **Visual Studio Code** v1.85.0 or higher
+2. The core [Comment Translate](https://marketplace.visualstudio.com/items?itemName=intellsmi.comment-translate) extension installed in your VS Code
+3. A valid [Cloudflare account](https://dash.cloudflare.com/sign-up) (free tier available)
 
-## Requirements
+## 🚀 Getting Started
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+### Step 1: Get Cloudflare Credentials
 
-## Extension Settings
+First, retrieve your Cloudflare Account ID and Workers AI API Token:
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+1. Log in to the [Cloudflare Dashboard](https://dash.cloudflare.com).
+2. Select your account from the homepage.
+3. In the left sidebar, navigate to **AI > Workers AI**.
+4. On the Workers AI page, click **Use REST API**.
+5. Under the **Get Account ID** section, copy your Account ID value.
+6. On the same page, locate the **Create a Workers AI API Token** section.
+7. Verify the pre-configured permissions (the template automatically grants `Workers AI - Read` and `Workers AI - Edit` access).
+8. Click **Create API Token**, then copy and securely save your token.
 
-For example:
+> ⚠️ **Important**: Never share or commit your API Token to public repositories, as it grants access to your Cloudflare account's Workers AI resources.
 
-This extension contributes the following settings:
+### Step 2: Configure the Extension
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+1. Open VS Code Settings.
+2. Search for the **Comment Translate Cloudflare** extension settings.
+3. Paste the **Account ID** and **API Token** you copied earlier into the corresponding input fields.
 
-## Known Issues
+### Step 3: Activate the Translation Source
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+1. Open the VS Code Command Palette (`Ctrl+Shift+P` for Windows/Linux, `Cmd+Shift+P` for macOS).
+2. Run the **Comment Translate: Change translation source** command.
+3. Select **Cloudflare translate** from the dropdown list.
 
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Once selected, the extension will activate automatically. You can then use all Comment Translate features with Cloudflare AI as the translation backend.
