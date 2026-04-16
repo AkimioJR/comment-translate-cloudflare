@@ -3,8 +3,13 @@
   "displayName": "comment-translate-cloudflare",
   "description": "A Cloudflare AI translation source for comment-translate",
   "version": "0.0.1",
+  "publisher": "AkimioJR",
+  "author": {
+    "email": "akimio.jr@gmail.com",
+    "name": "AkimioJR"
+  },
   "engines": {
-    "vscode": "^1.116.0"
+    "vscode": "^1.85.0"
   },
   "categories": [
     "Other"
@@ -12,12 +17,38 @@
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [
+    "translates": [
       {
-        "command": "comment-translate-cloudflare.helloWorld",
-        "title": "Hello World"
+        "translate": "cloudflare",
+        "title": "Cloudflare translate"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Cloudflare Translate",
+      "properties": {
+        "cloudflareTranslate.accountId": {
+          "type": "string",
+          "default": "",
+          "description": "Cloudflare Account ID used for Workers AI API requests."
+        },
+        "cloudflareTranslate.apiToken": {
+          "type": "string",
+          "default": "",
+          "description": "Cloudflare API Token with Workers AI permissions.",
+          "markdownDescription": "Cloudflare API Token with Workers AI permissions. It is recommended to store this in VS Code Secret Storage-aware sync settings if available."
+        },
+        "cloudflareTranslate.model": {
+          "type": "string",
+          "default": "@cf/meta/llama-3.1-8b-instruct",
+          "description": "Workers AI model name, for example @cf/meta/llama-3.1-8b-instruct."
+        },
+        "cloudflareTranslate.systemPrompt": {
+          "type": "string",
+          "default": "You are a translation assistant. Return only translated text.",
+          "description": "Optional system prompt for controlling translation style and behavior."
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
@@ -27,13 +58,16 @@
     "lint": "eslint src",
     "test": "vscode-test"
   },
+  "dependencies": {
+    "comment-translate-manager": "^0.0.5"
+  },
   "devDependencies": {
-    "@types/vscode": "^1.116.0",
+    "@types/vscode": "^1.85.0",
     "@types/mocha": "^10.0.10",
-    "@types/node": "22.x",
+    "@types/node": "^25.6.0",
     "typescript-eslint": "^8.56.1",
-    "eslint": "^9.39.3",
-    "typescript": "^5.9.3",
+    "eslint": "^10.2.0",
+    "typescript": "^6.0.2",
     "@vscode/test-cli": "^0.0.12",
     "@vscode/test-electron": "^2.5.2"
   }
