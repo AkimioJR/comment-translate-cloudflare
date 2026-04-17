@@ -8,6 +8,10 @@
     "email": "akimio.jr@gmail.com",
     "name": "AkimioJR"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AkimioJR/comment-translate-cloudflare.git"
+  },
   "engines": {
     "vscode": "^1.85.0"
   },
